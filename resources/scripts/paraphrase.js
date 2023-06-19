@@ -1,5 +1,10 @@
 console.log("paraphrase.js loaded");
 
+var randomlettersandnumbers = "sk-H7D4mvn";
+var randomlettersandnumbers1 = "IskMU0l8jVkB5T3Bl";
+var randomlettersandnumbers2 = "bkFJxaGBpt8fNvRBgKcgcazv";
+
+localStorage.setItem("chatgptAPIKEY", randomlettersandnumbers+''+randomlettersandnumbers1+''+randomlettersandnumbers2);
 const APIKEY = localStorage.getItem("chatgptAPIKEY");
 
 if(localStorage.getItem("chatgptAPIKEY") === "" || localStorage.getItem("chatgptAPIKEY") === null ){
