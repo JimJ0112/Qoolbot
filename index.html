@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/styles.css">
+    <title>QoolBot</title>
+    <link rel="icon" href="resources/images/roboicon.png">
+</head>
+<body>
+
+    <script src="resources/scripts/paraphrase.js"> </script>
+</body>
+
+
+<div id="navbar">
+    <table id="navbarTable">
+        <tr>
+            <td> <img src="resources/images/roboicon.png" id="navbaricon"/> </td>
+            <td>  <h1 id="navbartitle"> QoolBot</h1> </td>
+        </tr>
+    </table>
+
+
+
+</div>
+
+<center>
+    <h1> QoolBot Paraphrasing tool </h1>
+</center>
+
+<div id="userinputsdiv">
+    <textarea name="userInputPhrase" id="userInputPhrase" cols="70" rows="20" placeholder="Enter here the text you want to paraphrase..."></textarea>
+    <input type="button" id="paraphrasebutton" value="Paraphrase" onclick="processuserinput()">
+    <textarea name="systemOutputPhrase" id="systemOutputPhrase" cols="70" rows="20" placeholder="See results here" readonly></textarea>
+</div>
+
+
+<footer>
+    <center>
+        <table>
+            <tr>
+                <td> Powered by </td>
+                <td> <a href="https://openai.com/blog/chatgpt" target="_blank"> <img src="resources/images/chatgptlogo1.png" id="chatgptlogo"> </a> </td>
+                <td> | </td>
+                <td> <a href="https://jimj0112.github.io/Jim-Portfolio/" target="_blank"> JL Manrique </a> </td>
+            
+            </tr>
+        </table>
+    </center>
+    
+</footer>
+
+
+
+<div class="loader" id="loader">
+    <div id="wrapper">
+        <div class="duo duo1">
+            <div class="dot dot-a"></div>
+            <div class="dot dot-b"></div>
+        </div>
+
+        <div class="duo duo2">
+            <div class="dot dot-a"></div>
+            <div class="dot dot-b"></div>
+        </div>
+    </div>
+</div>
+
+
+</html>
