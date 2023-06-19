@@ -1,6 +1,6 @@
 console.log("paraphrase.js loaded");
 
-const APIKEY = "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";
+const APIKEY = "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";
 
 
 function fetchchatgpt(apikey, phrase){
