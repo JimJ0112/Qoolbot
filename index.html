@@ -9,8 +9,7 @@
 </head>
 <body>
 
-    <script src="resources/scripts/paraphrase.js"> </script>
-</body>
+
 
 
 <div id="navbar">
@@ -18,10 +17,11 @@
         <tr>
             <td> <img src="resources/images/roboicon.png" id="navbaricon"/> </td>
             <td>  <h1 id="navbartitle"> QoolBot</h1> </td>
+            
         </tr>
     </table>
 
-
+    <div id="changeAPIKEYTD" onclick="showAPIKEYFORM()"> Change API Key</div>
 
 </div>
 
@@ -41,9 +41,9 @@
         <table>
             <tr>
                 <td> Powered by </td>
-                <td> <a href="https://openai.com/blog/chatgpt" target="_blank"> <img src="resources/images/chatgptlogo1.png" id="chatgptlogo"> </a> </td>
+                <td> <a href="https://openai.com/blog/chatgpt" target="_blank" class="subtlelink"> <img src="resources/images/chatgptlogo1.png" id="chatgptlogo"> </a> </td>
                 <td> | </td>
-                <td> <a href="https://jimj0112.github.io/Jim-Portfolio/" target="_blank"> JL Manrique </a> </td>
+                <td> <a href="https://jimj0112.github.io/Jim-Portfolio/" target="_blank" class="subtlelink"> JL Manrique </a> </td>
             
             </tr>
         </table>
@@ -68,4 +68,21 @@
 </div>
 
 
+<div id="getAPIKEYBG">
+    <div id="getAPIKEYform">
+        <p class="closeButton" onclick="closeAPIFORM()"> ✕ </p>
+        <div id="getAPIKEYformContents">
+            <h3> Enter your API Key</h3>
+            <input type="text" id="APIKEYTB" placeholder="API Key here"/>
+            <br/>
+            <input type="button" value="Enter" id="EnterButton" onclick="saveAPIKEYtoLocalStorage()"/>
+            <br/>
+            <p> Doesn't have API Keys yet? <br/>
+             Get Yours at <a href="https://platform.openai.com/account/api-keys" target="_blank">platform.openai</a></p>
+        </div>
+    </div>
+</div>
+
+<script src="resources/scripts/paraphrase.js"> </script>
+</body>
 </html>

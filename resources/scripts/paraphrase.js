@@ -1,6 +1,35 @@
 console.log("paraphrase.js loaded");
 
-const APIKEY = "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";
+const APIKEY = localStorage.getItem("chatgptAPIKEY");
+
+if(localStorage.getItem("chatgptAPIKEY") === "" || localStorage.getItem("chatgptAPIKEY") === null ){
+    document.getElementById('getAPIKEYBG').style.display = "block";
+} else{
+
+}
+
+
+function saveAPIKEYtoLocalStorage(){
+    var APIKEYTBvalue = document.getElementById('APIKEYTB').value;
+
+    if(APIKEYTBvalue === "" || !APIKEYTBvalue.replace(/\s/g, '').length){
+       
+        document.getElementById("APIKEYTB").style.borderColor = "red";
+        document.getElementById("APIKEYTB").style.borderBlockEndWidth = "3px";
+        document.getElementById("APIKEYTB").focus();
+        
+
+    } else{
+        localStorage.setItem("chatgptAPIKEY",APIKEYTBvalue);
+        document.getElementById('getAPIKEYBG').style.display = "none";
+        
+    }
+    
+}
+
+function showAPIKEYFORM(){
+    document.getElementById('getAPIKEYBG').style.display = "block";
+}
 
 
 function fetchchatgpt(apikey, phrase){
@@ -43,6 +72,8 @@ function fetchchatgpt(apikey, phrase){
      }).catch(error => {
 
              console.log(error)
+             document.getElementById('systemOutputPhrase').value = error
+             document.getElementById('systemOutputPhrase').style.color="red"
         
              return error
 
@@ -59,14 +90,20 @@ function fetchchatgpt(apikey, phrase){
 function processuserinput(){
     var phrase = document.getElementById('userInputPhrase').value;
     var phraseElement = document.getElementById('userInputPhrase');
+    var apikey = localStorage.getItem("chatgptAPIKEY");
 
+    if(apikey === "" || apikey === null){
+        showAPIKEYFORM();
+    } else{
+        if(phrase === "" || !phrase.replace(/\s/g, '').length){
+            phraseElement.value = "";
+        }else{
+            phrase = "Paraphrase this sentence, '" + phrase + "'";
+            fetchchatgpt(apikey, phrase);
+        }
 
-    if(phrase === "" || !phrase.replace(/\s/g, '').length){
-        phraseElement.value = "";
-    }else{
-        phrase = "Paraphrase this sentence, '" + phrase + "'";
-        fetchchatgpt(APIKEY, phrase);
     }
+
 
 
 }
@@ -79,4 +116,8 @@ function showresult(result){
     document.getElementById('loader').style.display = "none";
 
 
+}
+
+function closeAPIFORM(){
+    document.getElementById('getAPIKEYBG').style.display = "none";
 }
