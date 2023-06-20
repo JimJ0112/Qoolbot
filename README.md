@@ -1,4 +1,4 @@
 # Qoolbot
-# Practice of interfacing with apis
-# using chatgpt api
+# Practice for utilizing APIs
+# using chatgpt API
 # Visit us at https://jimj0112.github.io/Qoolbot/
