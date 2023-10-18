@@ -1,8 +1,8 @@
 console.log("paraphrase.js loaded");
 
-var randomlettersandnumbers = "sk-H7D4mvn";
-var randomlettersandnumbers1 = "IskMU0l8jVkB5T3Bl";
-var randomlettersandnumbers2 = "bkFJxaGBpt8fNvRBgKcgcazv";
+var randomlettersandnumbers = "sk-hly1eg";
+var randomlettersandnumbers1 = "YWTQmfNf9vwyoiT";
+var randomlettersandnumbers2 = "3BlbkFJeDFe9HkuuvEkMH5Npq04";
 
 localStorage.setItem("chatgptAPIKEY", randomlettersandnumbers+''+randomlettersandnumbers1+''+randomlettersandnumbers2);
 const APIKEY = localStorage.getItem("chatgptAPIKEY");
@@ -13,6 +13,7 @@ if(localStorage.getItem("chatgptAPIKEY") === "" || localStorage.getItem("chatgpt
 
 }
 
+//sk-hly1eg YWTQmfNf9vwyoiT 3BlbkFJeDFe9HkuuvEkMH5Npq04
 
 function saveAPIKEYtoLocalStorage(){
     var APIKEYTBvalue = document.getElementById('APIKEYTB').value;
